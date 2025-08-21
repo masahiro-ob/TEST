@@ -1,0 +1,647 @@
+@charset "UTF-8";
+
+/* ======================================== */
+/* 1. リセット & 全体共通スタイル           */
+/* ======================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,body {
+  margin: 0;
+  font-family: YakuHanJP, Montserrat, Lato, 'Noto Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ======================================== */
+/* 2. 基本レイアウト (PC向けベース)         */
+/* ======================================== */
+
+.desktop-1 {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: transparent; /* 初期状態は透明 */
+  transition: background 0.3s ease;
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.rogo-icon1 {
+}
+
+.home-parent {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: black;
+  margin-left: 50px;
+  letter-spacing: 2px;
+
+}
+
+.mv {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mv_sp {
+  display: none;
+}
+
+.work7 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.work-parent {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.work-child {
+  width: calc((100% - 100px) / 2);
+  margin-bottom: 100px; 
+  display: block;          /* ブロック要素として表示させる */
+  text-decoration: none;   /* リンクの下線を消す */
+  color: inherit;          /* 文字色を親要素から引き継ぐ */ transition: opacity 0.１s ease; 
+}
+
+.work-image {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+
+.work-caption {
+  width: 100%;
+  margin: 0;
+}
+
+.work-image:hover {
+  opacity: 0.7 !important; /* !important を追加 */
+  cursor: pointer;
+}
+
+.more-button {
+  width: 380px;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 30px;
+  margin: 0px auto 0; /* 上にマージンを追加 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid #000; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.more-button:hover {
+  background-color: #fff; 
+  color: #000; 
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+}
+
+.footerline-content {
+  border-top: 1px solid #a8a8a8;
+  margin-top: 100px;
+}
+
+.footer-content {
+  display: flex;
+  /* align-items: flex-start; */
+  padding-top: 50px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.footer-links {
+  /* display: flex; */
+  font-size: 16px;
+  letter-spacing: 2px;
+
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  margin: 100px 0 100px 0;
+  letter-spacing: 2px;
+
+}
+
+
+
+/* ======================================== */
+/* 3. work.html 固有スタイル (PC)           */
+/* ======================================== */
+
+.work_list_title{
+  font-size: 70px;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+  margin: 0;
+  padding-top: 77px;
+  padding-bottom: 30px;
+}
+
+.work_list_nav {
+  display: flex;
+  margin-bottom: 63px;
+}
+
+.full-width-separator-line {
+  width: 100vw;
+  height: 1px;
+  background-color: #c8c8c8;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 77px;
+}
+
+.work_list {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #000;
+  text-align: left;
+  margin: 0;
+  margin-right: 50px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+}
+
+.work_list::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #000000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.work_list:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* ======================================== */
+/* 4. detail.html 固有スタイル (PC)         */
+/* ======================================== */
+
+.web-design-item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.work_list_title2 {
+  font-size: 20px;
+  /* font-weight: 700; */
+  color: #000;
+  text-align: left;
+  margin: 0;
+  padding-top: 77px;
+  padding-bottom: 30px;
+}
+.work_list2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+  margin: 0;
+  margin-right: 50px;
+  padding-bottom: 109px;
+}
+.work-image2 {
+  width: 1000px;
+  border-radius: 30px;
+}
+.work-caption2 {
+  width: 900px;
+  font-size: 18px;
+  line-height: 40px;
+  padding-bottom: 100px;
+}
+.work-read2 {
+  width: 900px;
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+/* ======================================== */
+/* 5. ハンバーガーメニュー (★★★ 確定版 ★★★) */
+/* ======================================== */
+
+.hb-icon {
+  width: auto;
+  height: auto;
+  margin-left: 50px;
+  cursor: pointer;
+  /* アイコン自体が他の要素に隠れないように z-index を指定 */
+  position: relative;
+  z-index: 9999;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  /* z-indexを非常に大きな値にして、必ず最前面に表示 */
+  z-index: 5000;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out, visibility 0.4s;
+  visibility: hidden;
+}
+
+.hamburger-menu.is-active {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.hamburger-menu__content {
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.hamburger-menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.close-icon {
+  cursor: pointer;
+  /* ×印のサイズとクリック領域を確保 */
+  width: 24px;
+  height: 24px;
+  position: relative; /* 線の位置の基準にする */
+}
+
+/* 2本の線を疑似要素で作成 */
+.close-icon::before,
+.close-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px; /* 線の太さ */
+  background-color: #000; /* 線の色 */
+}
+
+/* 1本目の線を45度傾ける */
+.close-icon::before {
+  transform: rotate(45deg);
+}
+
+/* 2本目の線を-45度傾ける */
+.close-icon::after {
+  transform: rotate(-45deg);
+}
+
+.hamburger-menu__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.hamburger-menu__nav-item {
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: Montserrat, 'Noto Sans', sans-serif;
+  margin-bottom: 30px;
+  transition: opacity 0.3s;
+}
+
+.hamburger-menu__nav-item:hover {
+  opacity: 0.7;
+}
+
+/* ======================================== */
+/* 6. メディアクエリ (モバイル用)           */
+/* ======================================== */
+
+@media (max-width: 600px) {
+
+  body {
+    margin: 0;
+    /* font-family: Montserrat, 'Noto Sans', sans-serif; */
+  }
+
+  .desktop-1 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding: 70px 20px 0; 
+  }
+
+.header-inner {
+    height: 70px;      /* スマホ用のヘッダーの高さを指定 */
+    padding: 0 20px;   /* ページの左右の余白(20px)に合わせる */
+  }
+
+  .rogo-icon1 {
+    height: 25px;
+    width: auto;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mv {
+    display: none;
+  }
+
+  .mv_sp {
+    display: block;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .work-parent {
+    flex-direction: column;
+  }
+
+  .work-child {
+    width: 100%;
+    margin-bottom: 60px; 
+  }
+
+  .work-caption {
+    text-align: justify;
+  }
+
+  .work-image {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+  }
+  
+  .more-button {
+    width: 90%;
+    max-width: 380px;
+    height: 50px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-top: 50px;
+  }
+
+  .footer-nav-links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .footer-nav-links .nav-item {
+    margin-left: 0;
+    font-size: 16px;
+  }
+  .copyright {
+    font-size: 12px;
+    margin: 50px 0;
+    text-align: center;
+  }
+  .work_list_title {
+    font-size: 50px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .work_list {
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+    margin-right: 20px;
+  }
+  .full-width-separator-line {
+    margin-bottom: 30px;
+  }
+  .work_list_nav {
+    margin-bottom: 20px;
+  }
+  .web-design-item2 {
+    display: block;
+  }
+  .work_list_title2 {
+    font-size: 20px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .work_list2 {
+    font-size: 40px;
+    text-align: left;
+    margin: 0;
+    margin-right: 20px;
+    padding-bottom: 20px;
+  }
+  .work-image2 {
+    width: 100vw;
+    margin-left: -20px; 
+    border-radius: 0;
+  }
+  .work-caption2 {
+    width: 100%;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: justify;
+  }
+  .work-read2 {
+    width: 100%;
+    font-size: 30px;
+    line-height: 40px;
+    padding-bottom: 10px;
+    text-align: justify;
+  }
+  .hamburger-menu__header {
+    height: 70px;
+  }
+  .close-icon {
+    cursor: pointer;
+    /* ×印のサイズとクリック領域を確保 */
+    width: 22px;
+    height: 22px;
+    position: relative; /* 線の位置の基準にする */
+  }
+
+  /* 2本の線を疑似要素で作成 */
+  .close-icon::before,
+  .close-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px; /* 線の太さ */
+    background-color: #000; /* 線の色 */
+  }
+
+  /* 1本目の線を45度傾ける */
+  .close-icon::before {
+    transform: rotate(45deg);
+  }
+
+  /* 2本目の線を-45度傾ける */
+  .close-icon::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
+
+/* ======================================== */
+/* 7. スクロールエフェクト                     */
+/* ======================================== */
+
+/* (1) アニメーションの準備 */
+body {
+  /* 背景色が1.8秒かけて変化するように設定 */
+  transition: background-color 1.8s ease;
+}
+
+header {
+  /* ヘッダーの背景（グラデーション）が1.8秒かけて変化するように設定 */
+  transition: background 1.8s ease;
+}
+
+header .rogo-icon1,
+header .hb-icon,
+header .nav-item {
+  /* ヘッダー内の要素の色が1.8秒かけて変化するように設定 */
+  transition: all 1.8s ease-in-out;
+}
+
+/* (2) スクロール後のスタイル */
+
+/* ページ全体の背景を黒にする */
+body.body-scrolled {
+  background-color: #000;
+}
+
+/* ヘッダーにグラデーション背景を適用 */
+header.header-scrolled {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* ヘッダー内の要素の色を白（または反転）に変更 */
+body.body-scrolled .header-inner .rogo-icon1,
+body.body-scrolled .header-inner .hb-icon {
+  filter: invert(100%) brightness(200%);
+}
+
+body.body-scrolled .header-inner .nav-item {
+  color: #fff;
+}
+
+/* ヘッダー以外のページの文字色などを変更 */
+body.body-scrolled .work7,
+body.body-scrolled .work-caption,
+body.body-scrolled .work_list_title,
+body.body-scrolled .work_list,
+body.body-scrolled .work_list_title2,
+body.body-scrolled .work_list2,
+body.body-scrolled .work-read2,
+body.body-scrolled .work-caption2,
+body.body-scrolled .copyright,
+body.body-scrolled .footer-nav-links .nav-item {
+  color: #fff;
+}
+
+body.body-scrolled .footer-logo {
+  filter: invert(100%) brightness(200%);
+}
+
+body.body-scrolled .full-width-separator-line {
+  background-color: #555;
+}
+
+body.body-scrolled .more-button {
+  /* background-color: #fff; */
+  color:#fff;
+  border: 1px solid #fff;
+}
+
+body.body-scrolled .more-button:hover {
+  background-color: #fff; /* 背景を白（不透明）にする */
+  color: #000;                  /* 文字色を黒にする */
+}

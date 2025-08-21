@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/css/yakuhanjp.css">
+  <title>Document</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <div class="desktop-1">
+    <p class="work_list_title">WORK</p>
+    <div class="work_list_nav">
+      <span class="work_list" data-category="web-design">WEB DESIGN</span>
+      <span class="work_list" data-category="graphic-design">GRAPHIC DESIGN</span>
+    </div>
+    <div class="full-width-separator-line"></div>
+
+    <section class="work-parent">
+      <div class="work-child web-design-item" data-aos="fade-up" data-aos-duration="2000">
+        <a href="detail.html">
+          <img class="work-image" alt="作品画像" src="img/Rectangle 2.png">
+        </a>
+        <p class="work-caption">この文字はダミー...</p>
+      </div>
+      <div class="work-child web-design-item" data-aos="fade-up" data-aos-duration="2000">
+        <a href="aaaaaa.html">
+          <img class="work-image" alt="作品画像" src="img/Rectangle 2.png">
+        </a>
+        <p class="work-caption">この文字はダミー...</p>
+      </div>
+      <!-- 他のwork-childも同様に続けてください -->
+    </section>
+
+    <a href="index2.html" class="more-button">TOPへ戻る</a>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => { document.getElementById('header').innerHTML = data; });
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => { document.getElementById('footer').innerHTML = data; });
+    });
+  </script>
+  <!-- 必要なら他のJSも追加 -->
+</body>
+</html>
