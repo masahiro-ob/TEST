@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/css/yakuhanjp.css">
+  <title>Document</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <div class="desktop-1">
+    <img class="mv" alt="メインビジュアル" src="img/img.png">
+    <img class="mv_sp" alt="メインビジュアル" src="img/sp_img.png">
+
+    <p class="work7" data-aos="fade-up" data-aos-duration="2000">WORK</p>
+
+    <section class="work-parent">
+      <a href="detail.html" class="work-child" data-aos="fade-up" data-aos-duration="2000">
+        <img class="work-image" alt="作品画像" src="img/Rectangle 2.png">
+        <p class="work-caption">
+          この文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミー
+        </p>
+      </a>
+
+      <!-- 2つ目以降はaタグでimgを囲む構造 -->
+      <div class="work-child" data-aos="fade-up" data-aos-duration="2000">
+        <a href="detail.html">
+          <img class="work-image" alt="作品画像" src="img/Rectangle 2.png">
+        </a>
+        <p class="work-caption">
+          この文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミー
+        </p>
+      </div>
+
+      <div class="work-child" data-aos="fade-up" data-aos-duration="2000">
+        <a href="detail.html">
+          <img class="work-image" alt="作品画像" src="img/Rectangle 2.png">
+        </a>
+        <p class="work-caption">
+          この文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミー
+        </p>
+      </div>
+
+      <div class="work-child" data-aos="fade-up" data-aos-duration="1500">
+        <a href="detail.html">
+          <img class="work-image" alt="作品画像" src="img/Rectangle 2.png">
+        </a>
+        <p class="work-caption">
+          この文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミー
+        </p>
+      </div>
+
+      <div class="work-child" data-aos="fade-up" data-aos-duration="1500">
+        <a href="detail.html">
+          <img class="work-image" alt="作品画像" src="img/Rectangle 2.png">
+        </a>
+        <p class="work-caption">
+          この文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミー
+        </p>
+      </div>
+
+      <div class="work-child" data-aos="fade-up" data-aos-duration="1500">
+        <a href="detail.html">
+          <img class="work-image" alt="作品画像" src="img/Rectangle 2.png">
+        </a>
+        <p class="work-caption">
+          この文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミー
+        </p>
+      </div>
+
+      <div class="work-child" data-aos="fade-up" data-aos-duration="1500">
+        <a href="detail.html">
+          <img class="work-image" alt="作品画像" src="img/Rectangle 2.png">
+        </a>
+        <p class="work-caption">
+          この文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミー
+        </p>
+      </div>
+
+      <div class="work-child" data-aos="fade-up" data-aos-duration="1500">
+        <a href="detail.html">
+          <img class="work-image" alt="作品画像" src="img/Rectangle 2.png">
+        </a>
+        <p class="work-caption">
+          この文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミー
+        </p>
+      </div>
+
+      <div class="work-child" data-aos="fade-up" data-aos-duration="1500">
+        <a href="detail.html">
+          <img class="work-image" alt="作品画像" src="img/Rectangle 2.png">
+        </a>
+        <p class="work-caption">
+          この文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミーこの文字はダミー
+        </p>
+      </div>
+    </section>
+
+    <a href="work.html" class="more-button">もっと見る</a>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+  <script>
+    AOS.init(); 
+  </script>
+
+  <script>
+    // ハンバーガーメニュー用のスクリプト
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburgerIcon = document.querySelector('.hb-icon');
+      const closeIcon = document.querySelector('.close-icon');
+      const hamburgerMenu = document.querySelector('.hamburger-menu');
+      const navLinks = document.querySelectorAll('.hamburger-menu__nav-item');
+
+      if (hamburgerIcon) {
+        hamburgerIcon.addEventListener('click', function() {
+          if (hamburgerMenu) {
+            hamburgerMenu.classList.add('is-active');
+          }
+        });
+      }
+
+      if (closeIcon) {
+        closeIcon.addEventListener('click', function() {
+          if (hamburgerMenu) {
+            hamburgerMenu.classList.remove('is-active');
+          }
+        });
+      }
+
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (hamburgerMenu) {
+            hamburgerMenu.classList.remove('is-active');
+          }
+        });
+      });
+    });
+  </script>
+
+  <script>
+    // スクロール効果用のスクリプト
+    document.addEventListener('DOMContentLoaded', function() {
+      const body = document.body;
+      const header = document.querySelector('header');
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          body.classList.add('body-scrolled');
+          header.classList.add('header-scrolled');
+        } else {
+          body.classList.remove('body-scrolled');
+          header.classList.remove('header-scrolled');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    // header, footerインクルード用スクリプト
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+          // ヘッダー内のJSを再度動かしたい場合、ここで再実行も可
+        });
+
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        });
+    });
+  </script>
+</body>
+</html>
