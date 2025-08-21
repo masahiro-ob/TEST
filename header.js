@@ -3,24 +3,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const hamburgerMenu = document.querySelector('.hamburger-menu');
   const closeIcon = document.querySelector('.close-icon');
 
-  // メニューボタンがクリックされたらハンバーガーメニューを表示
   if (menuIcon && hamburgerMenu) {
     menuIcon.addEventListener('click', function () {
-      hamburgerMenu.classList.add('is-open');
+      hamburgerMenu.classList.add('is-active');
     });
   }
 
-  // 閉じるボタンがクリックされたらハンバーガーメニューを非表示
   if (closeIcon && hamburgerMenu) {
     closeIcon.addEventListener('click', function () {
-      hamburgerMenu.classList.remove('is-open');
+      hamburgerMenu.classList.remove('is-active');
     });
   }
 
-  // メニューの外側をクリックしたら閉じる（任意で追加可）
+  // メニュー外クリックで閉じる（任意）
   hamburgerMenu.addEventListener('click', function (e) {
     if (e.target === hamburgerMenu) {
-      hamburgerMenu.classList.remove('is-open');
+      hamburgerMenu.classList.remove('is-active');
     }
   });
 });
